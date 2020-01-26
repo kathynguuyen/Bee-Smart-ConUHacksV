@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+  
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("http://enrol.greenspringsschool.com/wp-content/uploads/2018/03/20150427_121715-1-1058x595.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  img {
+      float: left;
+      padding: 30px;
+  }
+  
+  
+  .container {
+    width: 500px;
+    max-width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 60px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px;
+    background-color: #00BFFF;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    font-size: 30px;
+  }
+  
+  .btn:hover {
+    color:#4169E1;
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: white;
+    background-color: green;
+  }
+  
+  .btn.incorrect {
+    --hue: var(--hue-wrong);
+    color:white;
+    background-color: red;
+  }
+  
+  .start-btn, .next-btn {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  #question {
+      font-size: 50px;
+      font-family: Comic Sans MS;
+      text-align: center;
+  }
+
+  
+  
+  .hide {
+    display: none;
+  }
